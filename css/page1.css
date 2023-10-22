@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../img/stockholm.jpeg');
+    background-size: cover;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#header {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.4fr 1.4fr 1.4fr;
+    gap: 0em 0em;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "nav-container nav-container"
+      "sl-container weather-container"
+      "sl-container book-container";
+    height: 100vh;
+}
+  
+.nav-container { 
+    grid-area: nav-container; 
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.nav-container > img {
+    width: 30px;
+    height: 30px;
+}
+
+.nav-container > p {
+    font-size: 3em;
+    margin-right: 100px;
+}
+  
+.sl-container { 
+    grid-area: sl-container; 
+}
+
+.sl-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+    background-color: whitesmoke;
+}
+
+.sl-timeitem {
+    display: flex;
+}
+
+.sl-busitem {
+    display: flex;
+}
+
+.sl-busitem > *:not(.sl-busitem img) {
+    padding-left: 10px;
+}
+
+.buss-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.sl-trainitem {
+    display: flex;
+}
+
+.sl-trainitem > *:not(.sl-trainitem img) {
+    padding-left: 10px;
+}
+
+.train-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.weather-container { 
+    grid-area: weather-container; 
+}
+
+.ow-now {
+    display: flex;
+}
+
+.ow-now > * {
+    margin-left: 10px;
+}
+
+.ow-now > p {
+    font-size: 2em;
+}
+
+.ow-now > img {
+    width: 5%;
+    height: 5%;
+}
+
+.ow-daily-item {
+    display: flex;
+    background-color: whitesmoke;
+    padding: 10px;
+    margin: 10px;
+}
+
+.ow-daily-item > p:last-child {
+    margin-left: 10px;
+}
+
+.ow-daily-item > img {
+    width: 30px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.book-container { 
+    grid-area: book-container; 
+}
+
+.book-item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    background-color: whitesmoke;
+    margin: 10px;
+    padding: 10px;
+}
+
+.book-item p:last-child {
+    color: gray;
+    font-size: 0.8rem;
+}
+
+.book-item p:first-child:first-letter {
+    font-weight: 1000;
+}
+
+.container > div:not(.nav-container) {
+    background-color: white;
+    opacity: 90%;
+    margin: 2%;
+}

@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#header {
+    margin-top: 5%;
+}
+
+#lessonCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lesson-item {
+    margin-top: 50px;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.nav-container { 
+    grid-area: nav-container; 
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.nav-container > img {
+    width: 30px;
+    height: 30px;
+}
+
+.nav-container > p {
+    font-size: 3em;
+    margin-right: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+}
